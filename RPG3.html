@@ -1,0 +1,248 @@
+<html>
+ <head>
+ <style>
+  th {
+    padding: 8px;
+	width: 31%;
+	float: left;
+	border:1px solid black;
+	font-family: Cardinal;
+  }
+  td {
+    padding: 8px;
+	width: 19%;
+	float: left;
+	border:1px solid black;
+	text-align: center;
+	font-family: Cardinal;
+  }
+   .Dados {
+   width: 29%;
+   padding: 5px;
+   font-family: Cardinal;
+   background: transparent;
+   border:1px solid black;
+   cursor: pointer;
+  }
+  .Dados:hover {
+   background: #dcdcdc;
+  }
+  .Selected {
+   width: 10%;
+   background: transparent;
+   padding: 12px;
+   font-family: Cardinal;
+   border:1px solid black;
+   cursor: pointer;
+  }
+  .Selected:hover {
+   background: #dcdcdc;
+  }
+  .Character {
+   float: right;
+   width: 30%;
+   border:1px solid black;
+  }
+  table {
+    float: left;
+	width: 19%;
+  }
+  select {
+    padding: 0.5em 1.8em;
+    background-color: transparent;
+    border:1px solid black;
+	float: left;
+	color: black;
+	font-family: Cardinal;
+	font-size: 17px;
+	width: 20%;
+  }
+  .center {
+       padding: 10px;
+	   width: 33%;
+	   float: left;
+  }
+  body {
+     background-image: url("https://www.flowpsicologiapositiva.com/wp-content/uploads/2021/03/grunge-vintage-old-paper-background-scaled.jpg");
+	 background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-size: cover;
+  }
+  input {
+     padding: 2px;
+	 width: 100%;
+	 height: 100%;
+	 border: transparent;
+	 text-align: center;
+	 font-family: Cardinal;
+	 background: transparent;
+  }
+  @font-face {
+     src: url(fonts/Cardinal.ttf);
+	 font-family: Cardinal;
+  }
+ </style>
+ <img class="Character" src="" id="Imagem" onclick="Escolher();">
+ </head>
+  <body>
+   <h1 style="font-family:Cardinal;">Status do Personagem</h1>
+	  <select id="Personagem">
+        <option value="Np">Nome do Personagem</option>
+        <option value="Rb">Ruby</option>
+        <option value="Mt">Mysthic</option>
+        <option value="Nm">Nightmare</option>
+      </select>
+	  <select style="width: 14%">
+	    <option>Nivel</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+		<option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+		<option>20</option>
+	  </select>
+	  <button class="Selected" float="right" id="Personagens" onclick="Escolher();">Selecionar</button>
+	<br>
+	<br>
+	<table>
+    <tr>
+     <th>Vida</th>
+     <td contenteditable="true"></td>
+    </tr>
+    <tr>
+     <th>Mana</td> 
+     <td contenteditable="true"></td>
+    </tr>
+    <tr>
+     <th>Força</td>
+     <td><input type="text" id="Força"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="Força" onclick="Força();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Agilidade</td>
+     <td><input type="text" id="Agilidade"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="Agilidade" onclick="Agilidade();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Contra-ataque</td>
+     <td><input type="text" id="C.O.C"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="COC" onclick="COC();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Inteligência</td>
+     <td><input type="text" id="INT"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="INT" onclick="INT();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Racionalidade</td>
+     <td><input type="text" id="RAC"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="RAC" onclick="RAC();">Jogar</button></td>
+    </tr>
+     <th>Estamina</td>
+     <td><input type="text" id="ESTA"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="ESTA" onclick="ESTA();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Salto</td> 
+     <td><input type="text" id="Salto"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="Salto" onclick="Salto();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Natação</td>
+     <td><input type="text" id="NAT"></td>
+     <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="NAT" onclick="NAT();">Jogar</button></td>	 
+    </tr>
+    <tr>
+     <th>Resistência</td>
+     <td><input type="text" id="RES"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="RES" onclick="RES();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Constituição</td>
+     <td><input type="text" id="CONST"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="CONST" onclick="CONST();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Furtividade</td>
+     <td><input type="text" id="FUR"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="FUR" onclick="FUR();">Jogar</button></td>
+    </tr>
+	</table>
+	<table class="center" style="width: 30%">
+    <tr>
+     <th>Arremesso</td>
+     <td><input type="text" id="ARR"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="ARR" onclick="ARR();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Carisma</td>
+     <td><input type="text" id="CAR"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="CAR" onclick="CAR();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Sorte</td>
+     <td><input type="text" id="SOR"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="SOR" onclick="SOR();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Escutar</td>
+     <td><input type="text" id="ESC"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="ESC" onclick="ESC();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Encontrar</td>
+     <td><input type="text" id="ENC"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="ENC" onclick="ENC();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Lábia</td>
+     <td><input type="text" id="LAB"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="LAB" onclick="LAB();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Intimidação</td>
+     <td><input type="text" id="INTIM"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="INTIM" onclick="INTIM();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Performance</td>
+     <td><input type="text" id="PER"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="PER" onclick="PER();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Trato com Animais</td>
+     <td><input type="text" id="TCA"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="TCA" onclick="TCA();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Mira/Arco</td>
+     <td><input type="text" id="MCA"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="MCA" onclick="MCA();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Mira/Besta</td>
+     <td><input type="text" id="MCB"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="MCB" onclick="MCB();">Jogar</button></td>
+    </tr>
+    <tr>
+     <th>Fé</td>
+     <td><input type="text" id="Fé"></td>
+	 <td class="Dados"><button class="Dados" style="width: 100%; padding: 4px;" type="button" id="Fé" onclick="Fé();">Jogar</button></td>
+    </tr>
+   </table>
+   <script style="display: none;" src="Scripts_RPG.js"></script>
+  </body>
